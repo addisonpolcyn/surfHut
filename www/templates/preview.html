@@ -1,0 +1,56 @@
+<ion-modal-view cache-view="false" view-title="Preview">
+    <ion-header-bar class="bar-positive">
+        <div class="buttons">
+            <button class="button button-icon icon ion-close" ng-click="prof.closeModal(1)"></button>
+        </div>
+        <h1 class="title">Preview Mode</h1>
+        <div class="buttons">
+            <button class="button button-icon icon ion-hammer" ng-click="prof.openModal(2, prof.currentItem)"></button>
+        </div>
+        
+    </ion-header-bar>
+
+  <ion-content class="padding">
+    <div ng-if="prof.currentUser">
+
+      <div class="card">
+        <div class="item item-avatar">
+            <img ng-src="{{prof.currentItem.ownerAvatar}}">
+            <h2>{{prof.currentItem.ownerName}}, 13 miles</h2>
+            <p>San Francisco, California</p>          
+        </div>
+
+        <div class="item item-image crop image">
+          <img ng-src="{{prof.currentItem.photo}}">  
+          <h2 class="pricetag"><span class="pricespan">$ {{prof.currentItem.price}}</span></h2>
+
+        </div>
+
+        <div class="row home-button">
+
+            <button class="button assertive {{prof.previewHeartColor}} button-icon icon ion-heart home-button"></button>
+      
+          <!--  ng-click="home.nope($index)"    
+            <button class="button button-icon icon ion-podium home-button" 
+            ng-click="home.openModal(profile.index)"></button>
+        -->
+            <h4 align="right" class="home-cards-title">{{prof.getFeet(prof.currentItem.length)}}'{{prof.getInches(prof.currentItem.length)}}" 
+            {{prof.currentItem.brand}} {{prof.currentItem.type}}</h4>
+        </div>  
+
+
+
+        <div class="item text-wrap">
+          <p>Condition: {{prof.currentItem.condition}}</p>
+          <p>Material: {{prof.currentItem.material}}</p>
+          <p>{{prof.currentItem.description}}</p>
+        </div>  
+        
+      </div>
+
+      <button class="button button-block button-assertive remove-listing" ng-click="prof.removeItem(prof.currentItem.$id)">Remove</button>   
+
+    </div>
+  </ion-content>
+
+</ion-modal-view>

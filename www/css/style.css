@@ -1,1 +1,292 @@
 /* Empty. Add your own CSS if you like */
+.item-menu.item.item-complex .item-content {
+	background-color: #444444;
+	color: #FFF;
+	font-weight: 500;
+	padding-bottom: 30px;
+}
+
+.item-menu.item.item-complex {
+	border: none !important;
+
+}
+
+.crop {
+    position: relative;
+    float: left;
+    width:  300px;
+    height: 300px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
+
+.image { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+.unit-price { position: absolute;
+ left: 15px; 
+ top: 22px; 
+ z-index: 9; }
+
+.price-field { 
+  margin-left: 15px; 
+  width: 40px; 
+}
+
+.price-field:focus {
+  background: #FFF;
+}
+
+.pricetag { 
+   position: absolute; 
+   top: 230px; 
+   left: 270px; 
+   align-content: flex-end;
+}
+
+.pricetag .pricespan { 
+   color: white; 
+   font: bold 24px/45px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.4);
+   padding-left: 10px;
+   padding-right: 35px;  
+   padding-top: 8px;
+   padding-bottom: 8px; 
+}
+
+.home-button {
+  color: DarkGrey;
+  font-size: 200px;
+  margin-right: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 3px;
+
+}
+
+.home-description {
+  word-break: normal;
+  word-wrap: normal;
+}
+
+.remove-listing {
+  position: absolute;
+}
+
+.profListings {
+  padding: 2px;
+  margin: 0px;
+  border: none;
+}
+
+.listing {
+  position: relative;
+  height: 160px;
+}
+
+.home-cards-title {
+  margin-left: 3px;
+  font-size: 22px;
+  color: #4D4D4D;
+}
+
+.appTitle {
+  font-family: Brush Script Std;
+  font-size: 22px;
+}
+
+.menu.menu-left {
+	width: 100%;
+	background-color: #444444;
+}
+
+.icon-menu.icon {
+	font-size: 20px;
+	margin-right: 10px;
+	border: 2px solid;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 100%;
+}
+
+.textarea {
+  min-height: 40px;
+}
+
+.landing {
+	background: url(../img/ocean.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+}
+
+.facebook {
+	max-width: 200px;
+	margin: 0 auto;
+}
+
+.facebook-button {
+	position: absolute;
+	top: 430px;
+}
+
+.big {
+	font-size: 20px;
+}
+
+/*tinder card styling stylesheet */
+
+td-cards {
+  display: block;
+}
+
+td-card {
+  position: absolute; /*set to absolute after gender age has been assigned*/
+  left: 50%;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  margin-left: -150px;
+  width: 300px;
+  height: 300px;
+
+  /*border: 1px solid #999;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 6px;*/
+}
+
+td-card.card-0 {
+  -webkit-transform: translate3d(0, 0px, 0);
+  transform: translate3d(0, 0px, 0);
+  top: 0px;
+  z-index: 10;
+}
+td-card.card-1 {
+  -webkit-transform: translate3d(0, 4px, 0);
+  transform: translate3d(0, 4px, 0);
+  z-index: 9;
+}
+td-card.card-2 {
+  -webkit-transform: translate3d(0, 8px, 0);
+  transform: translate3d(0, 8px, 0);
+  z-index: 8;
+}
+
+td-card .image {
+  position: relative;
+  width: 100%;
+}
+
+td-card img {
+	height: 295px;
+
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+/*-------------------------------*/
+
+.yes-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 30px;
+  color: rgb(111, 250, 111);
+  opacity: 0;
+}
+.no-text {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: rgb(255, 115, 115);
+  opacity: 0;
+}
+
+.fade {
+  -webkit-transition: 0.2s opacity linear;
+  transition: 0.2s opacity linear;
+  opacity: 0;
+}
+/*--------------------------------------*/
+
+.spinner svg {
+  width: 28px;
+  height: 28px;
+  stroke: #FFF;
+  fill: #FFF;
+}
+
+/*--------------------------------------*/
+.message {
+  padding: 10px;
+}
+.message-left {
+  text-align: left;
+}
+.message-right {
+  text-align: right;
+}
+.message > img {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.message > div {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 10px;
+  position: relative;
+}
+.message-left > div {
+  margin-left: 10px;
+  background-color: #e6e5eb;
+}
+.message-right > div {
+  margin-right: 10px;
+  background-color: #158ffe;
+  color: white;
+}
+.message > div:before {
+  content: "\00a0";
+  display: block;
+  height: 16px;
+  width: 9px;
+  position: absolute;
+  bottom: -7.5px;
+}
+.message-left > div:before {
+  background-color: #e6e5eb;
+  left: 10px;
+  -webkit-transform: rotate(70deg) skew(5deg);
+}
+.message-right > div:before {
+  background-color: #158ffe;
+  right: 10px;
+  -webkit-transform: rotate(118deg) skew(-5deg);
+}
+.message-footer input {
+  width: 100%;
+  border: 0;
+  background-color: #f4f4f4
+}
+
+/* user presence/ online status */
+.presence {
+  border-radius: 50%;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #ab9ba9;
+}
+
+.online {
+  background: #99d04a;
+}

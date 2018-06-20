@@ -1,0 +1,105 @@
+<ion-modal-view cache-view="false" view-title="Preview">
+    <ion-header-bar class="bar-positive">
+        <div class="buttons">
+            <button class="button button-icon icon ion-close" ng-click="prof.closeModal(2)"></button>
+        </div>
+        <h1 class="title">Update Listing</h1>
+        <div class="buttons">
+            <button class="button button-icon icon ion-camera"></button>
+        </div>
+        
+    </ion-header-bar>
+
+  <ion-content>
+    <div ng-if="prof.currentUser">
+
+    <ion-list class="list padding">
+         
+        <div class="item item-divider">Upload photos</div>
+        <div class="item item-image crop image">
+          <img ng-src="{{prof.currentItem.photo}}">
+        </div>
+        
+          
+
+      <!--  <div class="item item-divider">Describe your board</div>
+        <ion-list>
+          <ion-radio ng-model="listt.modern_retro" ng-value="'Modern'" name="modern_retro">Modern</ion-radio>
+            <ion-radio ng-model="listt.modern_retro" ng-value="'Retro'" name="modern_retro">Retro</ion-radio>
+          </ion-list>-->
+          
+        <div class="item item-divider">Length: {{prof.getFeet(prof.currentItem.length)}}'{{prof.getInches(prof.currentItem.length)}}"</div>
+        <div class="item range range-positive">
+          <input type="range" name="age" min="36" max="178"
+          ng-model="prof.currentItem.length" ng-checked="prof.currentItem.length">
+        </div>  
+
+
+        <div class="item item-divider">Brand</div>  
+        <label class="item item-input clearInput">
+            <input type="text" placeholder="Brand Name" maxlength="30" ng-model="prof.currentItem.brand" autofocus="autofocus"/>
+        </label>
+
+
+          <div class="item item-divider">Material</div>
+        <ion-list>
+          <ion-radio ng-model="prof.currentItem.material" ng-value="'Hard Top'" name="material">Hard Top</ion-radio>
+            <ion-radio ng-model="prof.currentItem.material" ng-value="'Soft Top'" name="material">Soft Top</ion-radio>
+            <!--<ion-radio ng-model="listt.mat" ng-value="'Wood'" name="material">Wood</ion-radio>
+            <ion-radio ng-model="listt.mat" ng-value="'Carbon Fiber'" name="material">Carbon Fiber</ion-radio>-->
+          </ion-list>
+
+
+        <div class="item item-divider">Type</div>
+        <ion-list>
+          <ion-radio ng-model="prof.currentItem.type" ng-value="'Longboard'" name="type">Longboard</ion-radio>
+            <ion-radio ng-model="prof.currentItem.type" ng-value="'Malibu'" name="type">Malibu</ion-radio>
+            <ion-radio ng-model="prof.currentItem.type" ng-value="'Gun'" name="type">Gun</ion-radio>
+            <ion-radio ng-model="prof.currentItem.type" ng-value="'Funboard'" name="type">Funboard</ion-radio>
+            <ion-radio ng-model="prof.currentItem.type" ng-value="'Shortboard'" name="type">Shortboard</ion-radio>
+            <ion-radio ng-model="prof.currentItem.type" ng-value="'Fish'" name="type">Fish</ion-radio>
+          </ion-list>
+
+
+        
+        <div class="item item-divider">Condition</div>
+        <ion-list>
+          <ion-radio ng-model="prof.currentItem.condition" ng-value="'New'" name="condition">New</ion-radio>
+          <ion-radio ng-model="prof.currentItem.condition" ng-value="'Great'" name="condition">Great</ion-radio>
+            <ion-radio ng-model="prof.currentItem.condition" ng-value="'Fair'" name="condition">Fair</ion-radio>
+            <ion-radio ng-model="prof.currentItem.condition" ng-value="'Poor'" name="condition">Poor</ion-radio>
+          </ion-list>
+
+
+        <div class="item item-divider">Price</div>  
+        <label class="item item-input-price clearInput">
+            <input class="price-field" type="text" value="" ng-model="prof.currentItem.price" ng-checked="listt.parsePrice(listt.price)" maxlength="5" autofocus="autofocus"/>
+            <span class="unit-price">$</span>
+        </label>
+
+        <div class="item item-divider">Describe Your Board</div>
+        <label class="item item-input item-text-wrap padding">
+            <textarea placeholder="Comments" rows="8" maxlength="500" ng-model="prof.currentItem.description" clearInput></textarea>
+          </label>
+
+
+      <!--  <div class="item item-divider">Setup</div>  
+        <ion-checkbox class="item-checkbox-right" ng-model="listt.setup.single">Single Fin</ion-checkbox>
+        <ion-checkbox class="item-checkbox-right" ng-model="listt.setup.twin">Twin</ion-checkbox>
+        <ion-checkbox class="item-checkbox-right" ng-model="listt.setup.thruster">Thruster</ion-checkbox>
+        <ion-checkbox class="item-checkbox-right" ng-model="listt.setup.quad">Quad</ion-checkbox>
+        <ion-checkbox class="item-checkbox-right" ng-model="listt.setup.nubster">Nubster</ion-checkbox>
+        <ion-checkbox class="item-checkbox-right" ng-model="listt.setup.na" ng-value="true">Not Available</ion-checkbox>
+      -->
+
+        <button class="button button-block button-balanced"
+          ng-click="prof.updateItem(prof.currentItem.$id, prof.currentItem)">Update
+        </button>
+
+    </ion-list>    
+    
+    </div>
+ 
+  </ion-content>
+
+</ion-modal-view>

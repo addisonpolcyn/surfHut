@@ -1,0 +1,124 @@
+<ion-view view-title="Profile">
+	<ion-content>
+		<div ng-if="prof.currentUser">
+
+			<div>
+
+				<!-- #for displaying the big photo
+				<span ng-repeat="image in prof.currentUser.avatar | limitTo:1">
+					<img ng-src="{{prof.currentUser.avatar}}">
+				</span>-->
+				
+				<div class="item item-avatar">
+					<img ng-src="{{prof.currentUser.avatar}}">
+					<h2>{{prof.currentUser.name}}</h2>
+					<p>San Francisco, California</p>					
+				</div>
+
+
+				<!--<div class="item item-divider">I am a</div>
+
+				<ion-toggle toggle-class="toggle-balanced"
+					ng-model="prof.male"
+					ng-checked="{{prof.male}}"
+					ng-change="prof.iAmMan()">Male
+				</ion-toggle>
+
+				<ion-toggle toggle-class="toggle-balanced"
+					ng-model="prof.female"
+					ng-checked="{{prof.female}}"
+					ng-change="prof.iAmWoman()">Female
+				</ion-toggle>
+
+				<div class="list">
+				  <label class="item item-input item-select">
+				    <div class="input-label">Age</div>
+				    <select ng-model="prof.usersAge" ng-checked="{{prof.currentUser.age}}" ng-change="prof.changedAge()">
+				    	<option value="{{prof.currentUser.age}}" selected>{{prof.currentUser.age}}</option>
+				    	<option>18</option>
+						<option>19</option>
+						<option>20</option>
+						<option>21</option>
+						<option>22</option>
+						<option>23</option>
+						<option>24</option>
+						<option>25</option>
+						<option>26</option>
+						<option>27</option>
+						<option>28</option>
+						<option>29</option>
+						<option>30</option>
+						<option>31</option>
+						<option>32</option>
+						<option>33</option>
+						<option>34</option>
+						<option>35</option>
+						<option>36</option>
+						<option>37</option>
+						<option>38</option>
+						<option>39</option>
+						<option>40</option>
+						<option>41</option>
+						<option>42</option>
+						<option>43</option>
+						<option>44</option>
+						<option>45</option>
+						<option>46</option>
+						<option>47</option>
+						<option>48</option>
+						<option>49</option>
+						<option>50</option>
+						<option>51</option>
+						<option>52</option>
+						<option>53</option>
+						<option>54</option>
+						<option>55</option>
+						<option>56</option>
+						<option>57</option>
+						<option>58</option>
+						<option>59</option>
+						<option>60</option>
+				    </select>
+				  </label>
+
+				</div>-->
+
+				<!--<ion-content ng-controller="ImagePickerController">
+                <button class="button button-full button-positive" ng-click="getImageSaveContact()">
+                    Get Image and Save a Contact with It
+                </button>
+                <img ng-src="{{collection.selectedImage}}" style="width:100%; height: auto;"/>-->
+				
+			</div>
+
+		<!--	<div class="list card" ng-repeat="item in prof.listings">
+
+
+			<div class="item item-image crop image">
+				<img ng-src="{{item.photo}}">	
+				<h2 class="pricetag"><span class="pricespan">$ {{item.price}}</span></h2>
+
+			</div>
+
+			<div class="row home-button">
+					<h4 align="right" class="home-cards-title">{{item.getFeet(board.length)}}'{{item.getInches(board.length)}}" 
+					{{item.brand}} {{item.type}}</h4>
+			</div>	-->
+
+			<div class="row" ng-repeat="item in prof.listings track by $index" ng-if="$index % 2 == 0">
+			  <div class="col col-50 profListings" 
+			       ng-repeat="i in [$index, $index + 1]" 
+			       ng-if="prof.listings[i] != null">
+			    
+			    <div class="item item-image listing image">
+					<img ng-src="{{prof.listings[i].photo}}" ng-click="prof.openModal(1, prof.listings[i])">	
+				</div>
+
+			  </div>
+			</div>
+
+		</div>
+
+		</div>
+	</ion-content>
+</ion-view>
